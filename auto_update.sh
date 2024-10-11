@@ -24,13 +24,13 @@ update_function(){
     echo -e "\n${greenColour}[+] Relax, while I am doing the magic.${endColour}\n"
 
     # Update
-    echo $password | sudo -S apt-get update &> /dev/null 
+    echo $password | sudo -S apt-get update -y &> /dev/null 
 
     # Upgrade
-    echo $password | sudo -S apt-get upgrade &> /dev/null 
+    echo $password | sudo -S apt-get upgrade -y &> /dev/null 
 
     # Autoremove 
-    echo $password | sudo -S apt-get autoremove &> /dev/null 
+    echo $password | sudo -S apt-get autoremove -y &> /dev/null 
 
     # Mostrar todo
     echo -e "\n${yellowColour}[+] Terminado.${endColour}"
