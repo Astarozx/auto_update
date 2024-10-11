@@ -12,7 +12,7 @@ grayColour="\e[0;37m"
 
 ask_password(){
     # Mostrar mensaje pidiendo la contraseña
-    echo -e "${yellowColour}Hey, give me your password if you don't mind.${endColour}"
+    echo -e "\n${yellowColour}[+] Hey, give me your password if you don't mind.${endColour}"
     
     # Leer la contraseña sin mostrarla en pantalla
     read -s password
@@ -20,10 +20,10 @@ ask_password(){
 
 function_1(){
     # Primero hacemos un update en el sistema
-    echo -e "${greenColour}Relax, while I am doing the magic.${endColour}"
+    echo -e "$\n{greenColour}[+] Relax, while I am doing the magic.${endColour}"
 
     # Update
-    echo $password | sudo -S apt-get update
+    echo $password | sudo -S apt-get update &> /dev/null &
 }
 
 # Llamar a la función ask_password
