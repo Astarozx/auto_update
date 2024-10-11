@@ -10,6 +10,13 @@ purpleColour="\e[0;35m"
 turquoiseColour="\e[0;36m"
 grayColour="\e[0;37m"
 
+function ctrl_c(){
+
+	echo -e "\n${yellowColour}[*]${endColour}${grayColour} Exiting...${endColour}"; sleep 1
+	rm $tmp_file 2>/dev/null
+	tput cnorm; exit 1
+}
+
 update_function(){
     # Oculta el cursor
     tput civis
